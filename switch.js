@@ -6,7 +6,25 @@
 // Verwachtte uitkomsten:
 // calculate(3, 4, 'add') geeft 7
 // calculate(5, 7, 'subtract') geeft -2
-// calculate(25, 5, 'divide') geeft 5
+// calculate(25, 5, 'divide') geeft 5 
+
+function calculate(num1, num2, operator) {
+    switch (operator) {
+        case 'add':
+            return num1 + num2;
+            break;
+        case 'subtract':
+            return num1 - num2;
+        case 'divide':
+            return num1 / num2;
+        default:
+            break;
+    }
+}
+console.log(calculate(3, 4, 'add'));
+console.log(calculate(5, 7, 'subtract'));
+console.log(calculate(25, 5, 'divide'));
+
 
 
 
@@ -22,4 +40,17 @@
 // getErrorMessage(0) geeft "Geen watertoevoer"
 // getErrorMessage(4) geeft "Geen druk"
 
+function getErrorMessage(errorcode) {
+    switch (errorcode) {
+        case 0: return "Geen watertoevoer";
+        case 1: return "Temperatuur te laag";
+        case 2: return "Koffiebonen op";
+        case 3: return "Afvalbak vol";
+        case 4: return "Geen druk";
 
+        default:
+            return "errorcode onbekend";
+    }
+}
+console.log(getErrorMessage(0));
+console.log(getErrorMessage(4));
